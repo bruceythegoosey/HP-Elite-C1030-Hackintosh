@@ -18,4 +18,10 @@ Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 | Touchscreen | 13.5" 1920 x 1280 I2CHID | Fully Supported |
 | Sound | Intel SST HD Audio | Unsupported |
 | Touchpad | I2CHID | Fully Supported
-| Camera | 720p HD webcam | Fully Supported |
+| Webcam | 720p HD webcam | Fully Supported |
+
+## Installation
+### Preliminary
+1. Flash Mr. Chromebox's [CoreBoot Firmware](https://mrchromebox.tech/).
+3. Build the base OpenCore EFI for [Comet Lake Laptops](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html/).
+4. Map USB Devices [Guide](https://old.reddit.com/r/hackintosh/comments/ta1ef4/guide_easy_usb_mapping_with_usbtoolbox_on_windows/). This particualar guide seems to be the most useful. Having a working Windows install or knowledge of Windows PE is highly suggested. Don't forget to map the Wifi/BT and Webcam as internal!
