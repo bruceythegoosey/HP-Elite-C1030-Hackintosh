@@ -6,7 +6,7 @@ Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 
 **The process described in this document may cause irreversible damage to your laptop. We accept absolutely no responsibility for the consequences of anyone electing to follow or ignore any of the instructions in this document, and make no guarantees about the quality or effectiveness of the software therein.**
 
-**This guide is intended to be used on a self-service basis. It may become out of date or no longer updated at any time. It is up to you to see accurate information. NO SUPPORT WHATSOEVER anywhere will be given to those using preconfigued EFI's, configurators, or Clover. Follow the Acidathera Documentation.**
+**This guide is intended to be used on a self-service basis. It may become out of date or no longer updated at any time. It is up to you to find up to date information. NO SUPPORT WHATSOEVER will be given to those using preconfigued EFI's, configurators, or Clover. Follow the Acidathera Documentation.**
 
 ## Specifications
 | Type | Model | Status |
