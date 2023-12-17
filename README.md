@@ -6,7 +6,7 @@ Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 
 **The process described in this guide may cause irreversible damage to your laptop. We accept absolutely no responsibility for the consequences of anyone electing to follow or ignore any of the instructions in this document, and make no guarantees about the quality or effectiveness of the software therein.**
 
-**This guide is intended to be used on a self-service and reference basis only. It may become out of date or no longer updated at any time. It is up to you to find up to date information. NO SUPPORT WHATSOEVER will be given to those using preconfigued EFI's, configurators, or Clover. Follow the Acidathera Documentation.**
+**This guide is intended to be used on a self-service and reference basis only. It may become out of date or no longer updated at any time. It is up to you to find up to date information. NO SUPPORT WHATSOEVER will be given to those using preconfigued EFI's/Plists, configurators, patches or Clover. Follow the Acidathera Documentation.**
 
 ## Specifications
 | Type | Model | Status |
@@ -40,7 +40,7 @@ Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 | SMCProcessor | VirtualSMC Satalite | [Link](https://github.com/acidanthera/VirtualSMC/releases) |
 | SMCSuperIO | VirtualSMC Satalite | [Link](https://github.com/acidanthera/VirtualSMC/releases) |
 | VoodooI2C | N/A | [Link](https://github.com/VoodooI2C/VoodooI2C) |
-| VoodooI2CHID | Native Trackpad Support | [Link](https://github.com/VoodooI2C/VoodooI2C)
+| VoodooI2CHID | VoodooI2C Satalite for Native Trackpad Support | [Link](https://github.com/VoodooI2C/VoodooI2C)
 | VoodooPS2Controller | Custom fork that uses HID Codes over ADB | [Link](https://github.com/1Revenger1/VoodooPS2/releases) |
 
 5. Map USB Devices [Guide](https://old.reddit.com/r/hackintosh/comments/ta1ef4/guide_easy_usb_mapping_with_usbtoolbox_on_windows/). This particualar guide seems to be the most useful. Having a working Windows install or knowledge of Windows PE is highly suggested. Don't forget to map the Wifi/BT and Webcam as internal!
