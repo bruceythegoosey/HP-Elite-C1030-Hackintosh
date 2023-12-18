@@ -14,7 +14,7 @@ Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 | Processor | Intel i3-10110U / i5-10310U / i7-10610U | Fully Supported |
 | Graphics | Intel UHD 620 | Fully Supported |
 | Memory | 8gb/16gb DDR4 | Fully Supported |
-| Storage | Samsung PM991 MZ9LQ128HBJQ 128gb/256gb M.2 2242 (Replaceable) | Unsupported |
+| Storage | Samsung PM991 MZ9LQ128HBJQ 128gb/256gb M.2 2242 (Replaceable) | Unsupported** |
 | WiFi + Bluetooth | Intel Wi-Fi 6 AX201 / Bluetooth 5.2 | Fully Supported |
 | WWAN | Intel XMM 7360 (Fibocom l850-gl) | Untested | 
 | Touchscreen | 13.5" 1920 x 1280 I2C ELAN | Fully Supported |
