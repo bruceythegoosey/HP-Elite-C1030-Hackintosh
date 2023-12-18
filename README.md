@@ -14,7 +14,7 @@ Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 | Processor | Intel i3-10110U / i5-10310U / i7-10610U | Fully Supported |
 | Graphics | Intel UHD 620 | Fully Supported |
 | Memory | 8gb/16gb DDR4 | Fully Supported |
-| Storage | 128gb/256gb M.2 2242 (Replaceable) | Fully Supported |
+| Storage | Samsung PM991 MZ9LQ128HBJQ 128gb/256gb M.2 2242 (Replaceable) | Unsupported |
 | WiFi + Bluetooth | Intel Wi-Fi 6 AX201 / Bluetooth 5.2 | Fully Supported |
 | WWAN | Intel XMM 7360 (Fibocom l850-gl) | Untested | 
 | Touchscreen | 13.5" 1920 x 1280 I2C ELAN | Fully Supported |
@@ -22,6 +22,8 @@ Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 | Sound | Intel DSP SST HD Audio | Unsupported |
 | Webcam | 720p HD webcam | Fully Supported |
 | Fingerprint Reader | Unknown | Unsupported |
+
+**OEM SSD's are not supported due to issues with the PM991 controller. It will not format to AFPS in MacOS recovery, let alone install MacOS. There are several workarounds online but none are particually stable. It is HIGHLY suggested to replace your drive with a supported M.2 2242 drive or M.2 2230 with an adapter. 
 
 ## Installation
 ### Preliminary
