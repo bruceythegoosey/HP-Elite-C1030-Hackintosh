@@ -23,7 +23,7 @@ Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 | Webcam | 720p HD webcam | Fully Supported |
 | Fingerprint Reader | Unknown | Unsupported |
 
-**OEM SSD's are not supported due to issues with the PM991 controller. It will not format to AFPS in MacOS recovery, let alone install MacOS. There are several workarounds online but none are particually stable. It is HIGHLY suggested to replace your drive with a supported M.2 2242 drive or M.2 2230 with an adapter. 
+**OEM SSD's are not supported due to issues with the PM991 controller. It will not format to AFPS or MacOS Extended in recovery, let alone install MacOS. There are several online workarounds involving flashing from a seperate but none are particually stable or viable. It is HIGHLY suggested to replace your drive with a supported M.2 2242 drive or M.2 2230 with an adapter. 
 
 ## Installation
 ### Preliminary
