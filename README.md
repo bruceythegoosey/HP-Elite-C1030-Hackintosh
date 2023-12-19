@@ -14,7 +14,7 @@ Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 | Processor | Intel i3-10110U / i5-10310U / i7-10610U | Fully Supported |
 | Graphics | Intel UHD 620 | Fully Supported |
 | Memory | 8gb/16gb DDR4 | Fully Supported |
-| Storage | Samsung PM991 MZ9LQ128HBJQ 128gb/256gb M.2 2242 (Replaceable) | Unsupported** |
+| Storage | Samsung PM991 MZ9LQ128HBJQ 128gb/256gb M.2 2230 (Replaceable) | Unsupported** |
 | WiFi + Bluetooth | Intel Wi-Fi 6 AX201 / Bluetooth 5.2 | Fully Supported |
 | WWAN | Intel XMM 7360 (Fibocom l850-gl) | Untested | 
 | Touchscreen | 13.5" 1920 x 1280 I2C ELAN | Fully Supported |
@@ -23,7 +23,7 @@ Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 | Webcam | 720p HD webcam | Fully Supported |
 | Fingerprint Reader | Unknown | Unsupported |
 
-**OEM SSD's are not supported due to issues with the PM991 controller. It will not format to AFPS or MacOS Extended in recovery, let alone install MacOS. There are several online workarounds involving flashing from a seperate but none are particually stable or viable. It is HIGHLY suggested to replace your drive with a supported M.2 2242 drive or M.2 2230 with an adapter. 
+**OEM SSD's are not supported due to issues with the Samsung PM991 controller. It will not format to AFPS or MacOS Extended in recovery, let alone install MacOS. There are several online workarounds involving flashing from a seperate but none are particually stable or viable. It is HIGHLY suggested to replace your drive with a supported M.2 2230 drive. I used the Corsair MP600 Mini 1tb, which is popular with the Steam Deck crowd.
 
 ## Installation
 ### Preliminary
@@ -33,6 +33,8 @@ Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 
 ### EFI Edits
 #### ACPI
+| SSDT | Notes | Link |
+
 #### Kexts
 | Kext | Notes | Link |
 |----------|----------|----------|
@@ -42,7 +44,7 @@ Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 | SMCProcessor | VirtualSMC Satalite | [Link](https://github.com/acidanthera/VirtualSMC/releases) |
 | SMCSuperIO | VirtualSMC Satalite | [Link](https://github.com/acidanthera/VirtualSMC/releases) |
 | VoodooI2C | N/A | [Link](https://github.com/VoodooI2C/VoodooI2C) |
-| VoodooI2CHID | VoodooI2C Satalite for Native Trackpad Support | [Link](https://github.com/VoodooI2C/VoodooI2C)
+| VoodooI2CHID | VoodooI2C Satalite for Touchscreen Support | [Link](https://github.com/VoodooI2C/VoodooI2C)
 | VoodooPS2Controller | Custom fork that uses HID Codes over ADB | [Link](https://github.com/1Revenger1/VoodooPS2/releases) |
 
 5. Map USB Devices [Guide](https://old.reddit.com/r/hackintosh/comments/ta1ef4/guide_easy_usb_mapping_with_usbtoolbox_on_windows/). This particualar guide seems to be the most useful. Having a working Windows install or knowledge of Windows PE is highly suggested. Don't forget to map the Wifi/BT and Webcam as internal!
