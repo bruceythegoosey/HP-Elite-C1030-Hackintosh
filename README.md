@@ -34,6 +34,9 @@ Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 ### EFI Edits
 #### ACPI
 | SSDT | Notes | Link |
+|----------|----------|----------|
+| SSDT-ALS0 | Ambient Light Sensor Spoof | [Link](https://github.com/CeuiLiSA/Opencore-EFI/blob/master/EFI/OC/ACPI/SSDT-ALS0.aml)
+
 
 #### Kexts
 | Kext | Notes | Link |
