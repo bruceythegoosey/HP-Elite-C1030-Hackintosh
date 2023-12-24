@@ -17,8 +17,8 @@ Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 | Storage | Samsung PM991 MZ9LQ128HBJQ 128gb/256gb M.2 2230 (Replaceable) | Unsupported** |
 | WiFi + Bluetooth | Intel Wi-Fi 6 AX201 / Bluetooth 5.2 | Fully Supported |
 | WWAN | Intel XMM 7360 (Fibocom l850-gl) | Untested | 
-| Touchscreen | 13.5" 1920 x 1280 I2C ELAN | Fully Supported |
-| Touchpad | I2CHID | Fully Supported |
+| Touchscreen | 13.5" 1920 x 1280 I2CHID Goodix | Fully Supported |
+| Touchpad | I2C ELAN | Fully Supported |
 | Sound | Intel DSP SST HD Audio | Unsupported |
 | Webcam | 720p HD webcam | Fully Supported |
 | Fingerprint Reader | Unknown | Unsupported |
