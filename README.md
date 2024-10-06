@@ -8,6 +8,12 @@ Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 
 **This guide is intended to be used on a self-service and reference basis only. It may become out of date or no longer updated at any time. It is up to you to find up to date information. NO SUPPORT WHATSOEVER will be given to those using preconfigued EFI's/Plists, configurators, patches or Clover. Follow the Acidathera Documentation and/or the Dortania OpenCore Install Guide.**
 
+## Tested Versions
+1. macOS Sonoma (14.7)
+2. macOS Sequoia (15.1)
+
+At the time of writing, October 6th 2024, Sonoma is the highest reccomened OS to use. macOS Sequoia, still, is not officially supported by some of the kernel extensions used in our EFI, so therefore, it is not considered fully supported. You are on your own if you decide to install Sequoia. 
+
 ## Specifications
 | Type | Model | Status |
 |----------|----------|----------|
@@ -29,34 +35,70 @@ Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 ### Preliminary
 
 1. Flash the Chromeintosh coreboot build. [GitHub Repo](https://github.com/Chromeintosh/coreboot)
-  a. `cd; curl -LJOk https://ethanthesleepy.one/macos/firmware-util.sh; chmod +x firmware-util.sh; sudo bash ./firmware-util.sh`
-3. Build the base OpenCore EFI for [Comet Lake Laptops](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html/).
+
+    a. `cd; curl -LJOk https://ethanthesleepy.one/macos/firmware-util.sh; chmod +x firmware-util.sh; sudo bash ./firmware-util.sh`
+2. Build the base OpenCore EFI for [Comet Lake Laptops](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html/).
 
 ### EFI Edits
 
-#### config.plist
-1. `DevirtualiseMimo` -> False
-2. `ProtectMemoryReigons` True
-3. `enable-backlight-smoothen` | Data | `01000000`
-4. `enable-backlight-registers-alternative-fix` | Data | `01000000`
-5. `rps-control` | Data | `01000000`
-6. `SecureBootModel` -> `Disabled` DURING INSTALLATION
+<hr>
+
+### config.plist
+
+A quick note: If you see something in the guide that says "HP Machines will require this quirk" or "Required by HP mothreboards", you can ignore them, as they are talking about regular HP laptops, that run Windows, and NOT Chromebooks. 
+
+#### ACPI:
+a. No extra changes are required here.
+
+<hr>
+
+#### Booter -> Quirks:
+a. `DevirtualiseMimo` -> False
+
+b. `ProtectMemoryReigons` -> True
+
+Everything else remains the same for this section.
+
+<hr>
+
+#### Device Properties -> PciRoot(0x0)/Pci(0x2,0x0)
+| Setting | Type | Value |
+|----------|----------|----------|
+| `AAPL,ig-platform-id`  | Data | `0900A53E` |
+| `disable-telemetry-load` | Data | `01000000`
+| `device-id` | Data | `9B3E0000` |
+| `enable-backlight-smoothen` | Data | `01000000` |
+| `enable-backlight-registers-alternative-fix` | Data | `01000000` |
+| `rps-control` | Data | `01000000` |
+
+<hr>
+
+#### Misc -> Security
+`SecureBootModel` -> `Disabled` DURING INSTALLATION ONLY, once done installing use `j223`
+
+NOTE: This MUST be off during installation or it will fail. Once it is completed, you can change it to `j223`
+
+<hr>
+
+#### PlatformInfo -> Generic
+a. Use `MacBookPro16,3` SMBIOS. Keep in mind the minimum macOS version for this SMBIOS is 10.15.4 (19E2265).
+
+<hr>
 
 
-#### ACPI
+### ACPI
 Note: It is advised to generate your own SSDTs using SSDTTime, a tool provided by CorpNewt. Using SSDTs built specifically for your system ensures reliability and reduces the chance of random ACPI errors.
 
-// ToDo: Link our own ALS0 SSDT here, DMAR, ADB maps, which SSDTs to use
 
 | SSDT | Notes | Link |
 |----------|----------|----------|
-| SSDT-ALS0 | Ambient Light Sensor Spoof | [Link](https://github.com/CeuiLiSA/Opencore-EFI/blob/master/EFI/OC/ACPI/SSDT-ALS0.aml)
+| SSDT-ALS0 | Ambient Light Sensor Spoof | [Link](https://github.com/bruceythegoosey/HP-Elite-C1030-Hackintosh/blob/main/Resources/SSDT-ALS0.dsl)
 | DMAR| Generally a good file to have | Made via SSDTTime 
-| SSDT-ChromeKeysJinlon | Enables top row key functionallity | [Link]()
-| SSDT-EC | EC SSDT, made via SSDTTime | n/a
-| SSDT-HPET | Patches out IRQ conflicts, made via SSDTTime | n/a
-| SSDT-PNLF | For proper screen backlight functioning, made via SSDTTime | n/a
-| SSDT-USBX | For proper USB support, made via SSDTTime | n/a
+| SSDT-ChromeKeysJinlon | Enables top row key functionallity | [Link](https://github.com/bruceythegoosey/HP-Elite-C1030-Hackintosh/blob/main/Resources/SSDT-ChromeKeysJinlon.dsl)
+| SSDT-EC (Laptop Version) | EC SSDT, made via SSDTTime |  Made via SSDTTime
+| SSDT-HPET | Patches out IRQ conflicts, made via SSDTTime |  Made via SSDTTime
+| SSDT-PNLF | For proper screen backlight functioning, made via SSDTTime |  Made via SSDTTime
+| SSDT-USBX | For proper USB support, made via SSDTTime |  Made via SSDTTime
 
 
 
@@ -89,4 +131,14 @@ The default configuration provided by Dortania's OpenCore Install Guide are suff
 
 
 ## Post Install
-(todo)
+1. Remove Verbose
+2. Switch to Release edition of OpenCore (If using Debug)
+3. Remove debug related values
+4. Run these in terminal:
+  
+        sudo pmset autopoweroff 0
+        sudo pmset powernap 0
+        sudo pmset standby 0
+        sudo pmset proximitywake 0
+        sudo pmset tcpkeepalive 0
+
