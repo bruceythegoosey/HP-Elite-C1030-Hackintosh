@@ -8,7 +8,7 @@ Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 
 **This guide is intended to be used on a self-service and reference basis only. It may become out of date or no longer updated at any time. It is up to you to find up to date information. NO SUPPORT WHATSOEVER will be given to those using preconfigued EFI's/Plists, configurators, patches or Clover. Follow the Acidathera Documentation and/or the Dortania OpenCore Install Guide. Please direct all Chromebook related support questions to the [Chrultrabook Forum](https://forum.chrultrabook.com/c/support/macos-support/).**
 
-## Tested Versions
+## Tested MacOS Versions
 - MacOS Monterey (12)
 - MacOS Ventura (13)
 - macOS Sonoma (14)
