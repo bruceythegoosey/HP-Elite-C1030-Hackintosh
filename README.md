@@ -210,9 +210,11 @@ You should have:
         sudo pmset tcpkeepalive 0
 
 6. Use ProperTree to strip disabled entries and comments in your config.plist.
-7. Hide the OpenCore boot menu by disabling `ShowPicker` in your config.plist.
+    - File -> Strip Disabled Entries
+    - File -> Strip Comments
+8. Hide the OpenCore boot menu by disabling `ShowPicker` in your config.plist.
     - Should you need it again, you can press `ESC` after the coreboot logo ends and before the Apple logo displays to bring the menu up.
-8. Sign into iServices if you want to
+9. Sign into iServices if you want to
     - If you are on macOS Sonoma or higher, you will need to use itlwm and Heliport to have functional iServices. Otherwise, you can ignore this.
 
 
