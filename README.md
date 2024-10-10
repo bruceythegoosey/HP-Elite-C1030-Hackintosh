@@ -23,7 +23,7 @@ At the time of writing, October 6th 2024, MacOS Sonoma is the highest reccomened
 | Graphics | Intel UHD 620 | Fully Supported, requires iGPU spoof to UHD 630 |
 | Memory | 8GB /16 GB DDR4 | Fully Supported |
 | Storage | Various 128gb/256gb M.2 2230 SSDs (Replaceable) | Unsupported if you have Samsung PM991** |
-| Storage Recommendation: | Any Western Digital 2230 SSD | All Western Digital SSDs are natively supported by macOS, though you will still need NVMeFix.kext for power management | 
+| Storage Recommendation: | Any Western Digital 2230 SSD | All Western Digital SSDs are natively supported by macOS but you will still need NVMeFix.kext for power management | 
 | WiFi + Bluetooth | Intel Wi-Fi 6 AX201 / Bluetooth 5.2 | Fully Supported |
 | WWAN | Intel XMM 7360 (Fibocom l850-gl) | Untested, available on specific models only. | 
 | Touchscreen | 13.5" 1920 x 1280 I2CHID Goodix | Works, but broken in macOS, leave disabled. |
