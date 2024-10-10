@@ -40,7 +40,7 @@ At the time of writing, October 6th 2024, MacOS Sonoma is the highest reccomened
 1. Flash the Chromeintosh coreboot build. [GitHub Repo](https://github.com/Chromeintosh/coreboot)
 
     a. `cd; curl -LJOk https://ethanthesleepy.one/macos/firmware-util.sh; chmod +x firmware-util.sh; sudo bash ./firmware-util.sh`
-2. Build the base OpenCore EFI for [Comet Lake Laptops](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html/).
+2. Build the base OpenCore EFI for [Comet Lake Laptops](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/coffee-lake-plus.html).
 
 ### EFI Edits
 
