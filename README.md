@@ -1,6 +1,8 @@
 # HP Elite C1030 Hackintosh
 Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 
+Please direct all support questions to the [Chrultrabook Forum](https://forum.chrultrabook.com/c/support/macos-support/)
+
 ### ⚠️ Disclaimer
 **By continuing, you acknowledge that you have read and understood the contents of the following disclaimer, and consent to their terms.**
 
