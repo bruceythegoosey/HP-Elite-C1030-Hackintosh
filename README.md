@@ -1,20 +1,18 @@
 # HP Elite C1030 Hackintosh
 Installing MacOS on the HP Elite C1030 Chromebook (Jinlon)
 
-Please direct all support questions to the [Chrultrabook Forum](https://forum.chrultrabook.com/c/support/macos-support/)
-
 ### ⚠️ Disclaimer
 **By continuing, you acknowledge that you have read and understood the contents of the following disclaimer, and consent to their terms.**
 
 **The process described in this guide may cause irreversible damage to your laptop. We accept absolutely no responsibility for the consequences of anyone electing to follow or ignore any of the instructions in this document, and make no guarantees about the quality or effectiveness of the software therein.**
 
-**This guide is intended to be used on a self-service and reference basis only. It may become out of date or no longer updated at any time. It is up to you to find up to date information. NO SUPPORT WHATSOEVER will be given to those using preconfigued EFI's/Plists, configurators, patches or Clover. Follow the Acidathera Documentation and/or the Dortania OpenCore Install Guide.**
+**This guide is intended to be used on a self-service and reference basis only. It may become out of date or no longer updated at any time. It is up to you to find up to date information. NO SUPPORT WHATSOEVER will be given to those using preconfigued EFI's/Plists, configurators, patches or Clover. Follow the Acidathera Documentation and/or the Dortania OpenCore Install Guide. Please direct all Chromebook related support questions to the [Chrultrabook Forum](https://forum.chrultrabook.com/c/support/macos-support/).**
 
 ## Tested Versions
 1. macOS Sonoma (14.7)
 2. macOS Sequoia (15.1)
 
-At the time of writing, October 6th 2024, Sonoma is the highest reccomened OS to use. macOS Sequoia, still, is not officially supported by some of the kernel extensions used in our EFI, so therefore, it is not considered fully supported. You are on your own if you decide to install Sequoia. 
+At the time of writing, October 6th 2024, MacOS Sonoma is the highest reccomened OS to use. Several kernel extensions have not yet been updated for MacOS Sequoia and is not considered fully supported. You are on your own if you decide to install MacOS Sequoia. 
 
 ## Specifications
 | Type | Model | Status |
@@ -90,7 +88,7 @@ a. Use `MacBookPro16,3` SMBIOS. Keep in mind the minimum macOS version for this 
 
 
 ### ACPI
-Note: It is advised to generate your own SSDTs using SSDTTime, a tool provided by CorpNewt. Using SSDTs built specifically for your system ensures reliability and reduces the chance of random ACPI errors. You can compile decompile ACPI source code (.dsl file extension) by using iASL, which can be downloaded from Intel's website, click [here](https://www.intel.com/content/www/us/en/developer/topic-technology/open/acpica/download.html) (Scroll down and look for Windows Binary Tools). If you are on macOS, you can compile using MaciASL, click [here](https://github.com/acidanthera/MaciASL) for the link.
+Note: It is advised to generate your own SSDTs using SSDTTime, a tool provided by CorpNewt. Using SSDTs built specifically for your system ensures reliability and reduces the chance of random ACPI errors. You can compile decompile ACPI source code (.dsl file extension) by using iASL, which can be downloaded from [Intel](https://www.intel.com/content/www/us/en/developer/topic-technology/open/acpica/download.html) (Scroll down and look for Windows Binary Tools). If you are on macOS, you can compile using [MaciASL](https://github.com/acidanthera/MaciASL).
 
 
 | SSDT | Notes | Link |
